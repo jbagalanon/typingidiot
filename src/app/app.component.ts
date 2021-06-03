@@ -10,11 +10,9 @@ lorem.sentence();
 })
 export class AppComponent {
   randomText = lorem.sentence();
-  solved = false;
+  enteredText = '';
 
   onInput(value: string) {
-    if (value === this.randomText) {
-      this.solved = true;
-    }
+    this.enteredText = value;
   }
 }

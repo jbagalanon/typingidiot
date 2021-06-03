@@ -4,12 +4,13 @@
       <h1 class="title has-text-centered">Typing Challenge</h1>
 
       <p class="has-text-centered">{{ randomText }}</p>
+      <span *ngFor = "let letter of randomText"></span>
 
       <div class="field">
         <input class="input" (input)="onInput($any($event.target).value)" />
       </div>
 
-      <div *ngIf = "randomText ===enteredText" class="box has-text-centered">
+      <div *ngIf = "randomText === enteredText" class="box has-text-centered">
         <p class="title">Success</p>
       </div>
     </div>
